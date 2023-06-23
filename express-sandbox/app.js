@@ -26,6 +26,9 @@ app.use('/users', usersRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
+const cors = require("cors");
+var app = express();
+app.use(cors());
 
 // error handler
 app.use(function(err, req, res, next) {
